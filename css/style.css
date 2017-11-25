@@ -1,0 +1,146 @@
+#canvas {
+	margin: 0 auto;
+	border: 1px solid #000;
+	min-height: 300px;
+	max-height: 100%;
+	width: 300px;
+}
+
+.highlight {
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.line-art {
+	border: 1px solid #000;
+}
+
+.house {
+	margin: 10px;
+	width: 204px;
+	position: relative;
+}
+
+.house .chimney {
+	width: 25px;
+	height: 50px;
+	border: 2px solid #000;
+	position: absolute;
+	top: 25px;
+	right: 30px;
+}
+
+.house .walls{
+	width: 200px;
+	height: 160px;
+	border: 2px solid #000;
+	margin-left: 18px;
+	position: relative;
+	top: -2px;
+}
+/**
+.house .roof {
+	width: 0;
+	height: 0;
+	border-left: 102px solid transparent;
+  	border-right: 102px solid transparent;
+  	border-bottom: 102px solid black;
+}/**/
+.house .roof {
+	border-bottom: 100px solid black;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 140px;
+}
+
+.house .window {
+	width: 30%;
+	height: 30%;
+	border: 2px solid #000;
+	position: relative;
+	clear: both;
+	margin-top: 25%;
+	margin-left: 10%;
+}
+
+.window .sash {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.sash.right {
+	border-left: 1px solid #000;
+	right: 1px;
+}
+.sash.left {
+	left: -1px;
+}
+.sash .frame {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.sash .glazing {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	border: 1px solid #000;
+}
+.sash .glazing.top {
+	top: -1px;
+}
+.sash .glazing.bottom {
+	bottom: -1px;
+}
+
+.door {
+	border: 2px solid #000;
+	width: 40%;
+	height: 70%;
+	position: absolute;
+	bottom: -2px;
+	right: 10%;
+	margin-bottom: 14px;
+}
+
+.door .window {
+	width: 50%;
+	margin: 0 auto;
+	top: 10%;
+}
+
+.door .handle {
+	width: 15%;
+	border-radius: 50%;
+	background-color: #000;
+	padding-top: 15%;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+}
+
+.doorsteps {
+	position: absolute;
+	width: 120%;
+	bottom: -14px;
+	left: -10%;
+}
+
+.doorsteps .doorstep {
+	border: 2px solid #000;
+	bottom: -2px;	
+	height: 5px;
+	position: relative;
+}
+
+.doorsteps .doorstep.first {
+	width: 84%;
+	left: 6%;
+	border-bottom: 0;
+}
