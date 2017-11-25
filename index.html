@@ -28,13 +28,32 @@
 			<p>CSS (Cascading Style Sheets) is a language for describing the rendering of HTML documents on screen, on paper, in speech, etc. CSS uses Selectors for binding style properties to elements in the document.</p>
 			<p>Selectors are patterns that match against elements in a tree, and as such form one of several technologies that can be used to select nodes in a HTML document. Selectors have been optimized for use with HTML and XML, and are designed to be usable in performance-critical code.</p>
 			<p>The selectors that already exist in CSS1 and CSS2, and new selectors for CSS3 and other languages that may need them are described in <a href="https://www.w3.org/TR/css3-selectors/">https://www.w3.org/TR/css3-selectors/</a>.</p>
+			<h2>Class selectors: The house</h2>
+			<p>There is a house depicted below which consists of following parts:</p>
+			<ul>
+				<li>Roof</li>
+				<li>Wall
+					<ul>
+						<li>Window</li>
+						<li>Door</li>
+					</ul>
+				</li>
+			</ul>
+			<p>The nesting in the list of identified parts of the house idicates the nesting of CSS classes applied to elements representing those.<p>
+			<h3>Class selector</h3>
+			<p>Working with HTML, authors may use the "period" notation (also known as "full stop", U+002E, .) when representing the class attribute. The class attribute value must immediately follow the full stop (.).</p>
+			<p>More details on the class selector can be found on<a href="https://www.w3.org/TR/css3-selectors/#class-html">https://www.w3.org/TR/css3-selectors/#class-html</a></p>
+			<h3>Class selectors and The House</h3>
+			<p>All the parts identified in the list above, are assigned a class matching the terms above. Thus, in order to select windows or door, typing <code>.window</code> or <code>.door</code> should do it.</p>
+			<h3>Try it yourself!</h3>
+			<label>Class selector(s): <input type="text" class="css-rules" value="."/></lable>
 		</article>
 	</section>
 	<section id="canvas">
 		<div class="house">
 			<div class="chimney"></div>
 			<div class="roof" data-css-mapping="background-border"></div>
-			<div class="walls">
+			<div class="wall">
 				<div class="window">
 					<div class="sash left">
 						<div class="frame">
@@ -74,7 +93,7 @@
 		</div>
 	</section>
 	<section id="editor">
-		<label>Rules: <input type="text" id="css" name="rules[]" value=""/></label>
+		<label>Rules: <input type="text" class="css-rules" value=""/></label>
 	</section>
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
