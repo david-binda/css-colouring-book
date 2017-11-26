@@ -1,6 +1,9 @@
 #lecture {
 	width: 50%;
 }
+#lecture article {
+	padding: 5%;	
+}
 #playground {
 	margin-left: 50%;
 	padding: 10% 0 0 10%;
