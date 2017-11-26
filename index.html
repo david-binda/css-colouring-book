@@ -58,6 +58,18 @@
 			<p>All the parts of our house identified in the list above, are assigned a matching class. Thus, in order to explore (select) window or door, typing <code>.window</code> or <code>.door</code> should do it.</p>
 			<p>Keep in mind, that, a class is a non-unique attribute, and thus many different elements may share such class. Let's take, for example, <code>.window</code>. Such selector would select all windows in our house. The one in roof, door and even the big one. Try it yourself!</p>
 			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
+			<h3>Combining selectors</h3>
+			<p>CSS Selectors can be combined using following list of combinators:</p>
+			<ul>
+				<li>whitespace</li>
+				<li>"greater-than sign" <code>></code></li>
+				<li>"plus sign" <code>+</code></li>
+				<li>"tilde" <code>~</code></tilde>
+			</ul>
+			<h4>Descendant combinator</h4>
+			<p>You may want selectors to describe an element that is the descendant of another element (e.g., "a window element that is contained within a door element"). Descendant combinators express such a relationship. A descendant combinator is whitespace that separates two selectors. Thus, selecting a window inside a door, could be done using following notation: <code>.door .window</code>, where the spance in between <code>.door</code> and <code>.window</code> is the descendant combinator, represented by whitespace.</p>
+			<p>Let's give it a try. Let's select a window in door, and window in roof, or more precisely window in dormer.</p>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
 		</article>
 	</section>
 	<section id="canvas">
