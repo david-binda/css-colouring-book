@@ -27,11 +27,23 @@
 			<h2>Class selectors: The house</h2>
 			<p>There is a house depicted below which consists of following parts:</p>
 			<ul>
-				<li>Roof</li>
-				<li>Wall
+				<li>House
 					<ul>
-						<li>Window</li>
-						<li>Door</li>
+						<li>Roof
+							<ul>
+								<li>Dormer
+									<ul>
+										<li>Window</li>
+									</ul>
+								</li>
+								<li>Chimney</li>
+							</ul>
+						</li>
+						<li>Wall
+							<ul>
+								<li>Window</li>
+								<li>Door</li>
+							</ul>
 					</ul>
 				</li>
 			</ul>
@@ -47,8 +59,25 @@
 	</section>
 	<section id="canvas">
 		<div class="house">
-			<div class="chimney"></div>
-			<div class="roof" data-css-mapping="background-border"></div>
+			<div class="roof" data-css-mapping="background-border">
+				<div class="chimney"></div>
+				<div class="dormer">
+					<div class="window round">
+						<div class="sash left">
+							<div class="frame">
+								<div class="glazing top"></div>
+								<div class="glazing bottom"></div>
+							</div>
+						</div>
+						<div class="sash right">
+							<div class="frame">
+								<div class="glazing top"></div>
+								<div class="glazing bottom"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="wall">
 				<div class="window">
 					<div class="sash left">

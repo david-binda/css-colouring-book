@@ -30,8 +30,8 @@
 	height: 50px;
 	border: 2px solid #000;
 	position: absolute;
-	top: 25px;
-	right: 16px;
+	bottom: 25px;
+	left: -32px;
 	background-color: #fff;
 }
 
@@ -43,23 +43,39 @@
 	position: relative;
 	top: -2px;
 }
-/**
 .house .roof {
-	width: 0;
-	height: 0;
-	border-left: 102px solid transparent;
-  	border-right: 102px solid transparent;
-  	border-bottom: 102px solid black;
-}/**/
-.house .roof {
-	border-bottom: 100px solid black;
+	border-top: 100px solid black;
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	height: 0;
 	width: 140px;
+	position: relative;
+	transform: rotate(180deg);
 }
 
-.house .window {
+.roof .dormer {
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	position: absolute;
+	bottom: 27px;
+	left: 40px;
+	transform: rotate(180deg);
+	border-radius: 50% 50% 0 0;
+}
+
+.dormer .window {
+	width: 80%;
+	height: 80%;
+	margin: 5% auto;
+}
+
+.window.round {
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.window {
 	width: 30%;
 	height: 30%;
 	border: 2px solid #000;
