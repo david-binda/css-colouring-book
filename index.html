@@ -57,7 +57,16 @@
 			<h3>Let's explore The House using CSS Selectors</h3>
 			<p>All the parts of our house identified in the list above, are assigned a matching class. Thus, in order to explore (select) window or door, typing <code>.window</code> or <code>.door</code> should do it.</p>
 			<p>Keep in mind, that, a class is a non-unique attribute, and thus many different elements may share such class. Let's take, for example, <code>.window</code>. Such selector would select all windows in our house. The one in roof, door and even the big one. Try it yourself!</p>
-			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
+			<h4>Exercise 1</h4>
+			<p>Using the textfield below, select all following parts of the house:</p>
+			<ul class="exercise" id="exercise-1">
+				<li class="task" data-exercise-type="select" data-exercise-solution=".door">door</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".roof">roof</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".wall">wall</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".window">window</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".chimney">chimney</li>
+			</ul>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value="." data-exercise-form-for="exercise-1"/></label></p>
 			<h3>Combining selectors</h3>
 			<p>CSS Selectors can be combined using following list of combinators:</p>
 			<ul>

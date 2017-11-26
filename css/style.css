@@ -6,7 +6,7 @@
 }
 #playground {
 	margin-left: 50%;
-	padding: 10% 0 0 10%;
+	padding: 10% 0 0 0;
 	position: fixed;
 	top: 0;
 }
@@ -173,4 +173,8 @@
 	width: 84%;
 	left: 6%;
 	border-bottom: 0;
+}
+
+.task.success::after {
+	content: " \2714";
 }
