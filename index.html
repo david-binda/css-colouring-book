@@ -95,6 +95,19 @@
 				<li class="task" data-exercise-type="select" data-exercise-solution=".dormer .window">Window inside dormer</li>
 			</ul>
 			<p><label>Class selector(s): <input type="text" class="css-rules" value="." data-exercise-form-for="exercise-3"/></label></p>
+			<h3>Child Combinator</h3>
+			<p>A child combinator describes a childhood relationship between two elements. A child combinator is made of the "greater-than sign" (U+003E, >) character and separates either two siple selectors, or two sequences of simple selectors, or a simple selector and a sequence of simple selectors.</p>
+			<p>The child-parent relationship in terms of HTML and CSS can be explained by an example on our house. Let's have a look on the two square windows. One is directly inside the wall, the second one, is inside the door. Both can be selected by <code>.wall .window</code>. Give it a try:</p>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
+			<p>But, when we are talking about child-parent relationship, the big window inside the wall, is a child of the wall. The other one, is directly inside the door. Thus, it is a child of door. But not a child of the wall, as there is another element in between those two - the door.</p>
+			<p>We could say, that the window inside the door is a grandchild of the wall. But CSS does not take grandchild relationship into account. All relationships beyond the parent-child relationship belong to the category of descendants, and we would need to use the descendant combinator, as it was discussed in the previous chapter.</p>
+			<h4>Exercise 4: Child combinator</h4>
+			<p>Let's explore the parent-child relationships in our house. Select following elements starting off the <code>.wall</code>:</p>
+			<ul class="exercise" id="exercise-4">
+				<li class="task" data-exercise-type="select" data-exercise-solution=".wall > .window">Window directly inside the wall</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".wall > .door > .window">Window inside the door, which are inside the wall</li>
+			</ul>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value=".wall >" data-exercise-form-for="exercise-4"/></label></p>
 		</article>
 	</section>
 	<section id="playground">
