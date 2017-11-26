@@ -25,24 +25,28 @@
 			<p>Selectors are patterns that match against elements in a tree, and as such form one of several technologies that can be used to select nodes in a HTML document. Selectors have been optimized for use with HTML and XML, and are designed to be usable in performance-critical code.</p>
 			<p>The selectors that already exist in CSS1 and CSS2, and new selectors for CSS3 and other languages that may need them are described in <a href="https://www.w3.org/TR/css3-selectors/">https://www.w3.org/TR/css3-selectors/</a>.</p>
 			<h2>Class selectors: The house</h2>
-			<p>There is a house depicted below which consists of following parts:</p>
+			<p>There is a house depicted below which consists of following parts: (tip: hover the words in order to get those highlighted in the image on the right hand side)</p>
 			<ul>
-				<li>House
+				<li class="show-me" data-show=".house">House
 					<ul>
-						<li>Roof
+						<li class="show-me" data-show=".roof">Roof
 							<ul>
-								<li>Dormer
+								<li class="show-me" data-show=".dormer">Dormer
 									<ul>
-										<li>Window</li>
+										<li class="show-me" data-show=".dormer .window">Window</li>
 									</ul>
 								</li>
-								<li>Chimney</li>
+								<li class="show-me" data-show=".roof .chimney">Chimney</li>
 							</ul>
 						</li>
-						<li>Wall
+						<li class="show-me" data-show=".wall">Wall
 							<ul>
-								<li>Window</li>
-								<li>Door</li>
+								<li class="show-me" data-show=".wall > .window">Window</li>
+								<li class="show-me" data-show=".door">Door
+									<ul>
+										<li class="show-me" data-show=".door > .window">Window</li>
+									</ul>
+								</li>
 							</ul>
 					</ul>
 				</li>

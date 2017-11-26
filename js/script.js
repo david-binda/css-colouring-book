@@ -62,9 +62,15 @@
 				}
 			}
 		},
+		showElement: function( event ) {
+			var selector = event.target.getAttribute( 'data-show' );
+			this.removePreviousHighlight();
+			this.highlight( selector, event );
+		},
 		init: function() {
 			var that = this,
-			    elements = document.querySelectorAll('.css-rules');
+			    elements = document.querySelectorAll( '.css-rules' ),
+			    showMe = document.querySelectorAll( '.show-me' );
 
 			if ( 0 !== elements.length ) {
 				for ( var i = 0; i < elements.length; i++ ) {
@@ -73,7 +79,12 @@
 					elements[i].addEventListener( 'paste', function( event ) { that.processChange( event ); } );
 				}
 			}
-				
+			if ( 0 !== showMe.length ) {
+				for ( var i = 0; i < showMe.length; i++ ) {
+					showMe[i].addEventListener( 'mouseover', function( event ) { that.showElement( event ); } );
+					showMe[i].addEventListener( 'mouseout', function( event ) { that.removePreviousHighlight(); } );
+				}
+			}			
 		}
 	}
 	document.addEventListener( 'DOMContentLoaded', function(event) {
