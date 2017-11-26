@@ -6,7 +6,7 @@
 			// Highlight the elements, if there are some.
 			if ( ( value.startsWith( '.' ) || value.startsWith( '#' ) ) && value.length > 1 ) {
 				this.removePreviousHighlight();
-				this.highlight( value );
+				this.highlight( value, event );
 			} else {
 				this.removePreviousHighlight();
 			}
@@ -20,10 +20,11 @@
 						    taskType = task.getAttribute( 'data-exercise-type' ),
 						    failed = false;
 						if ( 'select' === taskType ) {
+							var highlighted = this.canvas.querySelectorAll( '.highlight' );
 							var expectedSolution = this.canvas.querySelectorAll( task.getAttribute( 'data-exercise-solution' ) );
-							if ( 0 !== expectedSolution.length ) {
-								for ( var j = 0; j < expectedSolution.length; j++ ) {
-									if ( ! expectedSolution[j].classList.contains( 'highlight' ) ) {
+							if ( 0 !== highlighted.length && 0 !== expectedSolution.length && highlighted.length === expectedSolution.length ) {
+								for ( var j = 0; j < highlighted.length; j++ ) {
+									if ( -1 === Array.prototype.indexOf.call( expectedSolution, highlighted[j] ) ) {
 										failed = true;
 									}
 								}
@@ -37,8 +38,15 @@
 			}
 			
 		},
-		highlight: function( selector ) {
-			var elements = this.canvas.querySelectorAll( selector );
+		highlight: function( selector, event ) {
+			try {
+				var elements = this.canvas.querySelectorAll( selector );
+			} catch ( e ) {
+				console.log( e );
+				event.target.parentElement.classList.add( 'invalid-selector' );
+				return;
+			}
+			event.target.parentElement.classList.remove( 'invalid-selector' );
 			if ( 0 !== elements.length ) {
 				for ( var i = 0; i < elements.length; i++ ) {
 					elements[i].classList.add( 'highlight' );

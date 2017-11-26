@@ -51,7 +51,7 @@
 			<h3>Class attribute</h3>
 			<p>Class is a HTML attribute which can be associated with any HTML element. Or, when put the other way round, any HTML element can have a class attribute.</p>
 			<p>There can be a single element with some specific class, or many elements with the same class. The class is not a unique identifier, as it can be shared with many, possibly different, elements.</p>
-			<h3>Class selector</h3>
+			<h3>Simple class selector</h3>
 			<p>Working with HTML, authors may use the "period" notation (also known as "full stop", U+002E, .) when representing the class attribute. The class attribute value must immediately follow the full stop (.).</p>
 			<p>More details on the class selector can be found on<a href="https://www.w3.org/TR/css3-selectors/#class-html">https://www.w3.org/TR/css3-selectors/#class-html</a></p>
 			<h3>Let's explore The House using CSS Selectors</h3>
@@ -67,7 +67,18 @@
 				<li class="task" data-exercise-type="select" data-exercise-solution=".chimney">chimney</li>
 			</ul>
 			<p><label>Class selector(s): <input type="text" class="css-rules" value="." data-exercise-form-for="exercise-1"/></label></p>
-			<h3>Combining selectors</h3>
+			<h2>Chaining selectors - sequences of simple selectors</h2>
+			<p>A sequence of simple selectors is a chain of simple selectors, for instance class selectors discussed above, that are not separated by a combinator. Combinators will be discussed in following chapter.</p>
+			<p>Let's start with an example for a better idea of such chain or sequence of simple selectors. You might have noticed, that not all the windows in our house are the same. Not only some are place inside the roof, some are inside the door, and some windows are typical windows in a wall, but some are also round, and some are square.</p>
+			<p>This shape related information is, along the type information, is stored inside a class selector as well. For the tution purposes, it's simplified to <code>round</code> and <code>square</code> class names. In order to select all square windows, such a chain or sequence of simple selectors would look the following way: <code>.window.square</code>. Let's give it a try!</p>
+			<h3>Exercise 2: chaining simple selectors</h3>
+			<p>Select all following elements of given shape:</p>
+			<ul class="exercise" id="exercise-2">
+				<li class="task" data-exercise-type="select" data-exercise-solution=".window.square">Square windows</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".window.round">Round windows</li>
+			</ul>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value="." data-exercise-form-for="exercise-2"/></label></p>
+			<h2>Combining selectors</h2>
 			<p>CSS Selectors can be combined using following list of combinators:</p>
 			<ul>
 				<li>whitespace</li>
@@ -75,10 +86,15 @@
 				<li>"plus sign" <code>+</code></li>
 				<li>"tilde" <code>~</code></tilde>
 			</ul>
-			<h4>Descendant combinator</h4>
+			<h3>Descendant combinator</h3>
 			<p>You may want selectors to describe an element that is the descendant of another element (e.g., "a window element that is contained within a door element"). Descendant combinators express such a relationship. A descendant combinator is whitespace that separates two selectors. Thus, selecting a window inside a door, could be done using following notation: <code>.door .window</code>, where the spance in between <code>.door</code> and <code>.window</code> is the descendant combinator, represented by whitespace.</p>
 			<p>Let's give it a try. Let's select a window in door, and window in roof, or more precisely window in dormer.</p>
-			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
+			<h4>Exercise 3: Descendant combinator</h4>
+			<ul class="exercise" id="exercise-3">
+				<li class="task" data-exercise-type="select" data-exercise-solution=".door .window">Window inside door</li>
+				<li class="task" data-exercise-type="select" data-exercise-solution=".dormer .window">Window inside dormer</li>
+			</ul>
+			<p><label>Class selector(s): <input type="text" class="css-rules" value="." data-exercise-form-for="exercise-3"/></label></p>
 		</article>
 	</section>
 	<section id="playground">
@@ -104,7 +120,7 @@
 					</div>
 				</div>
 				<div class="wall">
-					<div class="window">
+					<div class="window square">
 						<div class="sash left">
 							<div class="frame">
 								<div class="glazing top"></div>
@@ -119,7 +135,7 @@
 						</div>
 					</div>
 					<div class="door">
-						<div class="window">
+						<div class="window square">
         	                                	<div class="sash left">
                 	                                	<div class="frame">
                         	                                	<div class="glazing top"></div>
