@@ -72,12 +72,30 @@
 			<p><label>Class selector(s): <input type="text" class="css-rules" value="."/></label></p>
 		</article>
 	</section>
-	<section id="canvas">
-		<div class="house">
-			<div class="roof" data-css-mapping="background-border">
-				<div class="chimney"></div>
-				<div class="dormer">
-					<div class="window round">
+	<section id="playground">
+		<section id="canvas">
+			<div class="house">
+				<div class="roof" data-css-mapping="background-border">
+					<div class="chimney"></div>
+					<div class="dormer">
+						<div class="window round">
+							<div class="sash left">
+								<div class="frame">
+									<div class="glazing top"></div>
+									<div class="glazing bottom"></div>
+								</div>
+							</div>
+							<div class="sash right">
+								<div class="frame">
+									<div class="glazing top"></div>
+									<div class="glazing bottom"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wall">
+					<div class="window">
 						<div class="sash left">
 							<div class="frame">
 								<div class="glazing top"></div>
@@ -91,50 +109,34 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="wall">
-				<div class="window">
-					<div class="sash left">
-						<div class="frame">
-							<div class="glazing top"></div>
-							<div class="glazing bottom"></div>
+					<div class="door">
+						<div class="window">
+        	                                	<div class="sash left">
+                	                                	<div class="frame">
+                        	                                	<div class="glazing top"></div>
+                                	                        	<div class="glazing bottom"></div>
+								</div>
+							</div>
+							<div class="sash right">
+								<div class="frame">
+									<div class="glazing top"></div>
+									<div class="glazing bottom"></div>
+								</div>
+							</div>
 						</div>
-					</div>
-					<div class="sash right">
-						<div class="frame">
-							<div class="glazing top"></div>
-							<div class="glazing bottom"></div>
+						<div class="handle"></div>
+						<div class="doorsteps">
+							<div class="doorstep first"></div>
+							<div class="doorstep second"></div>
 						</div>
-					</div>
-				</div>
-				<div class="door">
-					<div class="window">
-                                        	<div class="sash left">
-                                                	<div class="frame">
-                                                        	<div class="glazing top"></div>
-                                                        	<div class="glazing bottom"></div>
-                                                	</div>
-                                        	</div>
-                                        	<div class="sash right">
-                                                	<div class="frame">
-                                                        	<div class="glazing top"></div>
-                                                        	<div class="glazing bottom"></div>
-                                                	</div>
-                                        	</div>
-                                	</div>
-					<div class="handle"></div>
-					<div class="doorsteps">
-						<div class="doorstep first"></div>
-						<div class="doorstep second"></div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section id="editor">
-		<label>Rules: <input type="text" class="css-rules" value=""/></label>
-	</section>
+		</section>
+		<section id="editor">
+			<label>Rules: <input type="text" class="css-rules" value=""/></label>
+		</section>
+	</section><!-- /#playground -->
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="js/script.js"></script>

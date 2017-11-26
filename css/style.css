@@ -1,3 +1,12 @@
+#lecture {
+	width: 50%;
+}
+#playground {
+	margin-left: 50%;
+	padding: 10% 0 0 10%;
+	position: fixed;
+	top: 0;
+}
 #canvas {
 	margin: 0 auto;
 	border: 1px solid #000;
