@@ -55,7 +55,7 @@
 			
 		},
 		removePreviousHighlight: function() {
-			var elements = this.canvas.querySelectorAll( '#canvas .highlight' );
+			var elements = this.canvas.querySelectorAll( '.highlight' );
 			if ( 0 !== elements.length ) {
 				for ( var i = 0; i < elements.length; i++ ) {
 					elements[i].classList.remove( 'highlight' );
@@ -67,10 +67,32 @@
 			this.removePreviousHighlight();
 			this.highlight( selector, event );
 		},
+		colourChange: function( event ) {
+			var id = event.target.getAttribute( 'id' ),
+			    number = id.replace( 'color-', '' ).replace( 'selector-', '' ),
+			    colour = document.querySelector( '#color-' + number ).value,
+			    selector = document.querySelector( '#color-selector-' + number ).value;
+
+			if ( '' === selector ) {
+				return;
+			}
+			try {
+				var elements = this.canvas.querySelectorAll( selector );
+			} catch( e ) {
+				return;
+			}
+			if ( 0 !== elements.length ) {
+				for ( var i = 0; i < elements.length; i++ ) {
+					elements[i].style.backgroundColor=colour;
+					elements[i].style.borderColor=colour;
+				}
+			}
+		},
 		init: function() {
 			var that = this,
 			    elements = document.querySelectorAll( '.css-rules' ),
-			    showMe = document.querySelectorAll( '.show-me' );
+			    showMe = document.querySelectorAll( '.show-me' ),
+			    colouring = document.querySelectorAll( '#colouring-form input' );
 
 			if ( 0 !== elements.length ) {
 				for ( var i = 0; i < elements.length; i++ ) {
@@ -84,7 +106,13 @@
 					showMe[i].addEventListener( 'mouseover', function( event ) { that.showElement( event ); } );
 					showMe[i].addEventListener( 'mouseout', function( event ) { that.removePreviousHighlight(); } );
 				}
-			}			
+			}
+			if ( 0 !== colouring.length ) {
+				for ( var i = 0; i < colouring.length; i++ ) {
+					colouring[i].addEventListener( 'input', function( event ) { that.colourChange( event ); } );
+					colouring[i].addEventListener( 'change', function( event ) { that.colourChange( event ); } );
+				}
+			}		
 		}
 	}
 	document.addEventListener( 'DOMContentLoaded', function(event) {
