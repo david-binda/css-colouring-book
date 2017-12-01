@@ -83,8 +83,13 @@
 			}
 			if ( 0 !== elements.length ) {
 				for ( var i = 0; i < elements.length; i++ ) {
-					elements[i].style.backgroundColor=colour;
-					elements[i].style.borderColor=colour;
+					var mapping = elements[i].getAttribute( 'data-colour-mapping' );
+					console.log( mapping );
+					if ( null !== mapping ) {
+						elements[i].style[mapping]=colour;
+					} else {
+						elements[i].style.backgroundColor=colour;
+					}
 				}
 			}
 		},

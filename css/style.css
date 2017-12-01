@@ -63,6 +63,7 @@
 	width: 140px;
 	position: relative;
 	transform: rotate(180deg);
+	z-index: 1;
 }
 
 .roof .dormer {
@@ -95,6 +96,7 @@
 	clear: both;
 	margin-top: 25%;
 	margin-left: 10%;
+	background: #fff;
 }
 
 .window .sash {
@@ -137,6 +139,7 @@
 	bottom: -2px;
 	right: 10%;
 	margin-bottom: 14px;
+	background: #fff;
 }
 
 .door .window {
@@ -167,6 +170,7 @@
 	bottom: -2px;	
 	height: 5px;
 	position: relative;
+	background: #fff;
 }
 
 .doorsteps .doorstep.first {
